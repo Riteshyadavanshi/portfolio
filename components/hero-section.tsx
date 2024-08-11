@@ -39,7 +39,7 @@ export const HeroSection = () => {
             <Button> Download Cv</Button>
           </Link>
 
-          <Link href="https://wa.me/8291047365">
+          <Link href="https://wa.me/918291047365">
             <Button className="bg-green-600 flex items-center gap-2">
               <Image
                 src={"/what.svg"}
