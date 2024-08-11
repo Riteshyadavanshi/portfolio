@@ -35,7 +35,7 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className=" flex space-x-2">
-          <Link href="" download={""} target="_blank">
+          <Link href="/portfolio/resume.pdf" download={"/portfolio/resume.pdf"} target="_blank">
             <Button> Download Cv</Button>
           </Link>
 
