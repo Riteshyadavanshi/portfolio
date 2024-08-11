@@ -42,7 +42,7 @@ export const HeroSection = () => {
           <Link href="https://wa.me/918291047365">
             <Button className="bg-green-600 flex items-center gap-2">
               <Image
-                src={"/what.svg"}
+                src={"/portfolio/what.svg"}
                 width={400}
                 height={400}
                 alt="whatsapp icon"
