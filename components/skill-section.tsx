@@ -21,32 +21,32 @@ export const SkillSection = () => {
 
 const Skills: skillCardProps[] = [ 
   {
-    imageUrl: "nextjs.png",
+    imageUrl: "/portfolio/nextjs.png",
     label: "Nextjs",
   },
   {
-    imageUrl: "react.png",
+    imageUrl: "/portfolio/react.png",
     label: "Reactjs",
   },
  
   {
-    imageUrl: "js.png",
+    imageUrl: "/portfolio/js.png",
     label: "Javascript",
   },
   {
-    imageUrl: "ts.png",
+    imageUrl: "/portfolio/ts.png",
     label: "Typescript",
   },
   {
-    imageUrl: "nodejs.png",
+    imageUrl: "/portfolio/nodejs.png",
     label: "Nodejs",
   },
   {
-    imageUrl: "mongodb.png",
+    imageUrl: "/portfolio/mongodb.png",
     label: "Mongodb",
   },
   {
-    imageUrl: "tailwind.png",
+    imageUrl: "/portfolio/tailwind.png",
     label: "Tailwind Css",
   },
 
