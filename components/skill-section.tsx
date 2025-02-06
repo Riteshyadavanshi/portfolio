@@ -70,7 +70,7 @@ const SkillCard = ({ imageUrl, label }: skillCardProps) => {
       <div className="bg-slate-300 py-2  space-y-2 flex flex-col justify-center items-center">
         <div>
           <Image
-            src={"/"+imageUrl}
+            src={imageUrl}
             width={400}
             height={400}
             alt=""
