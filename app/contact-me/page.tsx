@@ -3,8 +3,8 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <section  className='mt-4'>
-      <div className="py-4   px-4 mx-auto max-w-screen-md bg-white rounded-md">
+    <section  className='mt-4 min-h-screen   '>
+      <div className="py-4   px-4 mx-auto max-w-screen-md bg-white rounded-md  ">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-indigo-900">Contact me</h2>
          
         <form action="#" className="space-y-8">

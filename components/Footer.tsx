@@ -11,7 +11,7 @@ const Footer = () => {
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li className="me-4 md:me-6">
             <Link href="https://github.com/Riteshyadavanshi" className="hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-github "><path d="M16 22s-1 0-2-1c1-1 2-3 2-3s0-1 0-1-1 1-3 1-3-1-3-1 0 1 0 1-1 2-2 3c-1 1-2 1-2 1s-3-1-4-4c0 0-1-3 2-4 1-1 1-1 1-2 0-1 0-3-1-4 0 0 0-1 0-1s0-1 1-2 2 0 2 0l1 1c0 0 0 0 1 0 0-1 1-1 2-1s2 0 2 1c1 0 1 0 1 0 0 0 0 0 1-1 0 0 1 0 2 0s1 1 1 2 0 1 0 1c-1 1-1 3-1 4 0 1 0 1 1 2 3 1 2 4 2 4-1 3-4 4-4 4z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github "><path d="M16 22s-1 0-2-1c1-1 2-3 2-3s0-1 0-1-1 1-3 1-3-1-3-1 0 1 0 1-1 2-2 3c-1 1-2 1-2 1s-3-1-4-4c0 0-1-3 2-4 1-1 1-1 1-2 0-1 0-3-1-4 0 0 0-1 0-1s0-1 1-2 2 0 2 0l1 1c0 0 0 0 1 0 0-1 1-1 2-1s2 0 2 1c1 0 1 0 1 0 0 0 0 0 1-1 0 0 1 0 2 0s1 1 1 2 0 1 0 1c-1 1-1 3-1 4 0 1 0 1 1 2 3 1 2 4 2 4-1 3-4 4-4 4z"></path></svg>
 
             </Link>
           </li>
@@ -27,9 +27,9 @@ const Footer = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="feather feather-linkedin text-blue-600"
               >
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
