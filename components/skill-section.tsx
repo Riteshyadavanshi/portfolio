@@ -51,11 +51,11 @@ const Skills: skillCardProps[] = [
   },
 
   {
-    imageUrl: "html.png",
+    imageUrl: "/portfolio/html.png",
     label: "Html",
   },
   {
-    imageUrl: "css.png",
+    imageUrl: "/portfolio/css.png",
     label: "Css",
   },
 ];
