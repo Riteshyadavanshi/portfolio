@@ -74,7 +74,7 @@ const ContactForm = () => {
               type="email"
               id="email"
               name="email"
-              required
+           
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               placeholder="example@gmail.com"
               value={formData.email}
@@ -93,7 +93,7 @@ const ContactForm = () => {
               type="text"
               id="subject"
               name="subject"
-              required
+              
               className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
               placeholder="Topic here..."
               value={formData.subject}
@@ -112,7 +112,7 @@ const ContactForm = () => {
               id="message"
               name="message"
               rows={6}
-              required
+         
               className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Leave a comment..."
               value={formData.message}
