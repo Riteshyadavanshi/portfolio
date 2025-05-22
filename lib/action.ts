@@ -14,7 +14,7 @@ export const sendEmail = async (formData: FormData) => {
     auth: {
       user: "riteshyadav4122@gmail.com",
       pass: "udnc jjbr mewd tnwy",
-    },
+     },
   });
   const mailOptions = {
     from: email,
