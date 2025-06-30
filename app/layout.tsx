@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ritesh Yadav | Portfolio",
-  description: "fullStack developer ",
+  description: "FullStack Developer ",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="absolute bg-pink-200 w-[400px] h-[400px] rounded-full blur-3xl  border-[10px] border-blue-500 -z-10 left-6"></div>
         <div className="absolute hidden md:block bg-pink-200 w-[400px] h-[400px] rounded-full blur-3xl border-[10px] border-blue-500  bottom-0 right-0 -z-10"></div>
         <Navbar/>
-        
+         
         {children}
         
         <Footer/>

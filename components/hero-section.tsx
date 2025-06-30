@@ -9,11 +9,11 @@ export const HeroSection = () => {
       <div className="flex-1 flex  justify-center items-center">
         <div className="w-[300px] h-[300px] ">
           <Image
-            src={"/portfolio/rite.png"}
+            src={"/ritesh.png"}
             width={700}
             height={700}
             alt="Ritesh yadav photo"
-            className=" aspect-square  rounded-full "
+            className=" aspect-square object-cover rounded-md "
           />
         </div>
       </div>
