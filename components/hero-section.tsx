@@ -9,7 +9,7 @@ export const HeroSection = () => {
       <div className="flex-1 flex  justify-center items-center">
         <div className="w-[300px] h-[300px] ">
           <Image
-            src={"/ritesh.png"}
+            src={"/portfolio/ritesh.png"}
             width={700}
             height={700}
             alt="Ritesh yadav photo"
