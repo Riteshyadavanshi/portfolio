@@ -9,8 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Ritesh Yadav | Portfolio",
   description: "FullStack Developer ",
-};
-
+  openGraph: {
+    url: "https://riteshyadavanshi.github.io/portfolio/",
+  },
+}
 export default function RootLayout({
   children,
 }: Readonly<{
