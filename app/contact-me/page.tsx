@@ -15,7 +15,7 @@ const ContactForm = () => {
   const [success, setSuccess] = useState<string | null>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -59,7 +59,7 @@ const ContactForm = () => {
   return (
     <section className="pt-32 pb-24 px-6 min-h-screen max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-16 items-start">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="space-y-8"
@@ -69,8 +69,8 @@ const ContactForm = () => {
               Let&apos;s <span className="text-gradient">Connect</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md">
-              Have a project in mind or just want to say hi? Feel free to reach out. 
-              I&apos;m always open to new opportunities and collaborations.
+              Have a project in mind or just want to say hi? Feel free to reach
+              out. I&apos;m always open to new opportunities and collaborations.
             </p>
           </div>
 
@@ -81,33 +81,32 @@ const ContactForm = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Email me at</p>
-                <p className="font-medium">ritesh@example.com</p>
+                <p className="font-medium">riteshyadav4122@gmail.com</p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4 text-gray-300">
               <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
                 <MessageSquare className="text-purple-400" size={20} />
-              </div>
-              <div>
-                <p className="text-sm text-gray-500">Socials</p>
-                <p className="font-medium">LinkedIn / Twitter / GitHub</p>
               </div>
             </div>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
           className="glass-effect p-8 md:p-10 rounded-3xl border border-white/5 relative"
         >
           <div className="absolute inset-0 bg-indigo-500/5 blur-3xl rounded-full -z-10" />
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <label
+                htmlFor="email"
+                className="text-sm font-medium text-gray-300 flex items-center gap-2"
+              >
                 <Mail size={14} className="text-indigo-400" /> Your Email
               </label>
               <input
@@ -122,7 +121,10 @@ const ContactForm = () => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="subject" className="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <label
+                htmlFor="subject"
+                className="text-sm font-medium text-gray-300 flex items-center gap-2"
+              >
                 <User size={14} className="text-indigo-400" /> Subject
               </label>
               <input
@@ -137,7 +139,10 @@ const ContactForm = () => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium text-gray-300 flex items-center gap-2">
+              <label
+                htmlFor="message"
+                className="text-sm font-medium text-gray-300 flex items-center gap-2"
+              >
                 <MessageSquare size={14} className="text-indigo-400" /> Message
               </label>
               <textarea
@@ -151,10 +156,14 @@ const ContactForm = () => {
               />
             </div>
 
-            {error && <p className="text-red-400 text-sm font-medium">{error}</p>}
-            {success && <p className="text-green-400 text-sm font-medium">{success}</p>}
+            {error && (
+              <p className="text-red-400 text-sm font-medium">{error}</p>
+            )}
+            {success && (
+              <p className="text-green-400 text-sm font-medium">{success}</p>
+            )}
 
-            <button 
+            <button
               disabled={pending}
               className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50 active:scale-[0.98]"
             >

@@ -1,7 +1,7 @@
 "use client"
 import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Sphere, MeshDistortMaterial, OrbitControls, Float, MeshGradientMaterial } from '@react-three/drei'
+import { Sphere, MeshDistortMaterial, OrbitControls, Float } from '@react-three/drei'
 
 const Blob3D = () => {
   return (
@@ -24,7 +24,7 @@ const Blob3D = () => {
 const Hero3DModel = () => {
   return (
     <div className="w-full h-[400px] md:h-[600px] cursor-grab active:cursor-grabbing flex items-center justify-center">
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }} alpha={true}>
+      <Canvas camera={{ position: [0, 0, 5], fov: 45 }} gl={{ alpha: true }}>
         <Suspense fallback={null}>
           {/* Intense Lighting Setup */}
           <ambientLight intensity={1.5} />
