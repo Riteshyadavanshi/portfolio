@@ -1,47 +1,45 @@
 import Link from "next/link";
 import React from "react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className=" bg-black  rounded-lg shadow m-4   md:absolute   w-full ">
-      <div className="w-full flex items-center justify-between mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          Get touch with me on social media
-        </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li className="me-4 md:me-6">
-            <Link href="https://github.com/Riteshyadavanshi" className="hover:underline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github "><path d="M16 22s-1 0-2-1c1-1 2-3 2-3s0-1 0-1-1 1-3 1-3-1-3-1 0 1 0 1-1 2-2 3c-1 1-2 1-2 1s-3-1-4-4c0 0-1-3 2-4 1-1 1-1 1-2 0-1 0-3-1-4 0 0 0-1 0-1s0-1 1-2 2 0 2 0l1 1c0 0 0 0 1 0 0-1 1-1 2-1s2 0 2 1c1 0 1 0 1 0 0 0 0 0 1-1 0 0 1 0 2 0s1 1 1 2 0 1 0 1c-1 1-1 3-1 4 0 1 0 1 1 2 3 1 2 4 2 4-1 3-4 4-4 4z"></path></svg>
+    <footer className="border-t border-zinc-900 bg-[#09090b]/80 backdrop-blur-lg py-12 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+        <div className="space-y-4 text-center md:text-left">
+          <h2 className="text-2xl font-bold tracking-tighter text-gradient">Ritesh Shrichandra Yadav</h2>
+          <p className="text-zinc-500 text-sm max-w-xs font-medium">
+            Frontend-focused Full-Stack Developer specializing in high-performance web applications.
+          </p>
+        </div>
 
-            </Link>
-          </li>
-          <li className="me-4 md:me-6">
-            <Link
-              href="https://www.linkedin.com/in/ritesh-yadav-560496247/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              className="hover:underline"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-linkedin text-blue-600"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </Link>
-          </li>
-        </ul>
+        <div className="flex flex-col items-center md:items-end gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            <ContactLink href="mailto:riteshyadav4122@gmail.com" icon={<Mail size={18} />} label="Email" />
+            <ContactLink href="tel:+918291047365" icon={<Phone size={18} />} label="Call" />
+            <ContactLink href="https://linkedin.com/in/Riteshyadavanshi" icon={<Linkedin size={18} />} label="LinkedIn" />
+            <ContactLink href="https://github.com/Riteshyadavanshi" icon={<Github size={18} />} label="GitHub" />
+          </div>
+          <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-[0.2em]">
+            © {new Date().getFullYear()} • Handcrafted in Mumbai
+          </p>
+        </div>
       </div>
     </footer>
   );
 };
+
+const ContactLink = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
+  <Link 
+    href={href} 
+    target="_blank"
+    className="flex items-center gap-2 text-zinc-400 hover:text-white transition-all duration-300 group"
+  >
+    <div className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center border border-zinc-800 group-hover:border-zinc-700 transition-colors shadow-sm">
+      {icon}
+    </div>
+    <span className="text-xs font-bold hidden sm:block uppercase tracking-wider">{label}</span>
+  </Link>
+);
 
 export default Footer;

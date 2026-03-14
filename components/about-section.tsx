@@ -1,26 +1,54 @@
-import React from 'react';
+"use client"
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Briefcase, BookOpen, Clock } from 'lucide-react'
 
 const AboutSection = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center   p-8 md:p-10">
-       
-       
+    <div className="bento-card h-full flex flex-col justify-between group overflow-hidden bg-zinc-900/50 border-zinc-800">
+      <div className="space-y-6">
+        <div className="flex items-center gap-2 text-zinc-400">
+          <Briefcase size={18} />
+          <h3 className="text-sm font-medium uppercase tracking-wider text-zinc-300">Experience</h3>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-zinc-800">
+            <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-zinc-700 ring-4 ring-zinc-900/50" />
+            <div className="space-y-1">
+              <h4 className="text-sm font-bold text-white uppercase tracking-tight">Junior Software Developer</h4>
+              <p className="text-xs text-zinc-400 font-medium">Dispatch Panda • Jun 2025 - Present</p>
+              <p className="text-xs text-zinc-500 leading-relaxed mt-2">
+                Engineering real-time shipment tracking with Angular/PrimeNG. Reduced dispatcher response time by 30%.
+              </p>
+            </div>
+          </div>
 
-      
-      <div className="w-full md:w-2/3 ">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">About Me</h2>
-        <p className="text-gray-600 text-lg mb-4">
-          Hi! I&apos;m <strong>Ritesh Yadav</strong>, a passionate and dedicated third-year B.Sc IT student specializing in Next.js and React.js development. With a strong foundation in HTML5, CSS3, JavaScript, TypeScript, and Tailwind CSS, I create modern and responsive web applications.
-        </p>
-        <p className="text-gray-600 text-lg mb-4">
-          I&apos;m currently honing my skills as a full-stack developer at pawfriend.in, where I contribute to building seamless and user-friendly experiences. I thrive on solving complex problems and turning innovative ideas into functional digital solutions.
-        </p>
-        <p className="text-gray-600 text-lg">
-          When I&apos;m not coding, you&apos;ll find me exploring the latest tech trends, contributing to open-source projects, or enjoying a good book.
-        </p>
+          <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-zinc-800">
+            <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-zinc-700 ring-4 ring-zinc-900/50" />
+            <div className="space-y-1">
+              <h4 className="text-sm font-bold text-white uppercase tracking-tight">Full-Stack Developer</h4>
+              <p className="text-xs text-zinc-400 font-medium">Pawfriend.in (Part-Time) • Jun 2023 - May 2025</p>
+              <p className="text-xs text-zinc-500 leading-relaxed mt-2">
+                Built Next.js 14 features; improved load times by 25%. Implemented JWT/RBAC security.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 pt-6 border-t border-zinc-800/50 flex items-center justify-between text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
+        <div className="flex items-center gap-1.5">
+          <Clock size={12} />
+          2+ Years Total Experience
+        </div>
+        <div className="flex items-center gap-1.5">
+          <BookOpen size={12} />
+          B.Sc IT
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutSection;
+export default AboutSection

@@ -1,6 +1,7 @@
 "use client";
-import { Button } from "@/components/custome-btn";
 import React, { useState, useTransition } from "react";
+import { motion } from "framer-motion";
+import { Send, Mail, User, MessageSquare } from "lucide-react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -56,77 +57,117 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="mt-4 min-h-screen">
-      <div className="py-4 px-4 mx-auto max-w-screen-md bg-white rounded-md">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-indigo-900">
-          Contact me
-        </h2>
-
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900"
-            >
-              Your email <span className="text-red-600">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-           
-              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-              placeholder="example@gmail.com"
-              value={formData.email}
-              onChange={handleChange}
-            />
+    <section className="pt-32 pb-24 px-6 min-h-screen max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-16 items-start">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="space-y-8"
+        >
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-6xl font-bold">
+              Let&apos;s <span className="text-gradient">Connect</span>
+            </h1>
+            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+              Have a project in mind or just want to say hi? Feel free to reach out. 
+              I&apos;m always open to new opportunities and collaborations.
+            </p>
           </div>
 
-          <div>
-            <label
-              htmlFor="subject"
-              className="block mb-2 text-sm font-medium text-gray-900"
-            >
-              Subject <span className="text-red-600">*</span>
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              
-              className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Topic here..."
-              value={formData.subject}
-              onChange={handleChange}
-            />
+          <div className="space-y-6">
+            <div className="flex items-center gap-4 text-gray-300">
+              <div className="w-12 h-12 rounded-full bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20">
+                <Mail className="text-indigo-400" size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-gray-500">Email me at</p>
+                <p className="font-medium">ritesh@example.com</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-4 text-gray-300">
+              <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center border border-purple-500/20">
+                <MessageSquare className="text-purple-400" size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-gray-500">Socials</p>
+                <p className="font-medium">LinkedIn / Twitter / GitHub</p>
+              </div>
+            </div>
           </div>
+        </motion.div>
 
-          <div className="sm:col-span-2">
-            <label
-              htmlFor="message"
-              className="block mb-2 text-sm font-medium text-gray-900"
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2 }}
+          className="glass-effect p-8 md:p-10 rounded-3xl border border-white/5 relative"
+        >
+          <div className="absolute inset-0 bg-indigo-500/5 blur-3xl rounded-full -z-10" />
+          
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="space-y-2">
+              <label htmlFor="email" className="text-sm font-medium text-gray-300 flex items-center gap-2">
+                <Mail size={14} className="text-indigo-400" /> Your Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="subject" className="text-sm font-medium text-gray-300 flex items-center gap-2">
+                <User size={14} className="text-indigo-400" /> Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What's this about?"
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="message" className="text-sm font-medium text-gray-300 flex items-center gap-2">
+                <MessageSquare size={14} className="text-indigo-400" /> Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                placeholder="Your message here..."
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none"
+                value={formData.message}
+                onChange={handleChange}
+              />
+            </div>
+
+            {error && <p className="text-red-400 text-sm font-medium">{error}</p>}
+            {success && <p className="text-green-400 text-sm font-medium">{success}</p>}
+
+            <button 
+              disabled={pending}
+              className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50 active:scale-[0.98]"
             >
-              Your message <span className="text-red-600">*</span>
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={6}
-         
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Leave a comment..."
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-
-          {error && <p className="text-red-500">{error}</p>}
-          {success && <p className="text-green-500">{success}</p>}
-
-          <Button disable={pending}>
-            {pending ? "Sending..." : "Send Message"}
-          </Button>
-        </form>
+              {pending ? (
+                "Sending..."
+              ) : (
+                <>
+                  <Send size={18} /> Send Message
+                </>
+              )}
+            </button>
+          </form>
+        </motion.div>
       </div>
     </section>
   );

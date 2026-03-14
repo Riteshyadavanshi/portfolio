@@ -2,17 +2,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";
+import StarsCanvas from "@/components/background-3d";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ritesh Yadav | Portfolio",
-  description: "FullStack Developer ",
-  openGraph: {
-    url: "https://riteshyadavanshi.github.io/portfolio/",
-  },
-}
+  title: "Ritesh Yadav | Full-Stack Developer",
+  description: "Portfolio of Ritesh Shrichandra Yadav, a Frontend-focused Full-Stack Developer specializing in Angular, React, and Next.js.",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,15 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white`}>
-        <div className="absolute bg-pink-200 w-[400px] h-[400px] rounded-full blur-3xl  border-[10px] border-blue-500 -z-10 left-6"></div>
-        <div className="absolute hidden md:block bg-pink-200 w-[400px] h-[400px] rounded-full blur-3xl border-[10px] border-blue-500  bottom-0 right-0 -z-10"></div>
-        <Navbar/>
-         
-        {children}
+      <body className={`${inter.className} relative overflow-x-hidden`}>
+        {/* Dark Mesh Background */}
+        <div className="fixed inset-0 -z-10 h-full w-full bg-[#09090b]">
+          <div className="absolute top-0 left-0 h-full w-full bg-[radial-gradient(circle_at_20%_20%,#18181b_0%,transparent_50%),radial-gradient(circle_at_80%_80%,#18181b_0%,transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 pointer-events-none"></div>
+        </div>
         
-        <Footer/>
-        </body>
+        <StarsCanvas />
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
