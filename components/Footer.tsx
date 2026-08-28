@@ -34,9 +34,6 @@ export const Footer = () => {
               label="GitHub"
             />
           </div>
-          <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-[0.2em]">
-            © {new Date().getFullYear()} • Handcrafted in Mumbai
-          </p>
         </div>
       </div>
     </footer>
