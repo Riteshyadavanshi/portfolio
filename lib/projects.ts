@@ -14,7 +14,7 @@ export const Projects: Project[] = [
     description:
       "Pet and street animal welfare platform with digital QR Aadhaar tags, secure pet profiles, and e-commerce for tags and collars. Built with Next.js 14, JWT/RBAC, and payment flows — improving load times by 25%.",
     imageUrl: "/portfolio/pawfriend.png",
-    tags: ["Next.js", "JWT", "RBAC", "E-commerce"],
+    tags: ["Next.js", "NestJS", "Claude Code", "Agentic Coding"],
     featured: true,
   },
   {

@@ -310,8 +310,7 @@ export const SkillSection = () => {
 
   return (
     <div className="bento-card h-full flex flex-col gap-4 sm:gap-6 group bg-zinc-900/50 border-zinc-800 overflow-hidden">
-      <div className="flex items-center justify-between gap-2">
-        <div className="flex items-center gap-2 text-zinc-400">
+      <div className="flex items-center gap-2 text-zinc-400">
           <Cpu
             size={18}
             className="group-hover:text-indigo-400 transition-colors"
@@ -320,22 +319,6 @@ export const SkillSection = () => {
             Expertise
           </h3>
         </div>
-        {autoPlayEnabled && (
-          <motion.div
-            className="flex items-center gap-1.5"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-60" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500" />
-            </span>
-            <span className="text-[10px] font-semibold uppercase tracking-widest text-zinc-500">
-              Live
-            </span>
-          </motion.div>
-        )}
-      </div>
 
       <div className="grid grid-cols-3 gap-3 flex-1 auto-rows-fr min-h-0 relative">
         {skills.map((skill, index) => (

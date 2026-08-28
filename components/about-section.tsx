@@ -10,7 +10,7 @@ const experiences = [
     current: true,
     description:
       "Engineering real-time shipment tracking with Angular/PrimeNG. Reduced dispatcher response time by 30%.",
-    tags: ["Angular", "PrimeNG", "Java", "Cloud", "Cursor"],
+    tags: ["Angular", "PrimeNG", "Java", "Next.js", "NestJS", "Claude Code", "Agentic Coding"],
   },
   {
     title: "Full-Stack Developer",
@@ -19,7 +19,7 @@ const experiences = [
     current: false,
     description:
       "Built Next.js 14 features; improved load times by 25%. Implemented JWT/RBAC security.",
-    tags: ["Next.js", "TypeScript", "MongoDB", "JWT"],
+    tags: ["Next.js", "NestJS", "Claude Code", "Agentic Coding"],
   },
 ]
 
