@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from "react";
+import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { 
   Code2, 
@@ -92,13 +92,13 @@ const SkillCard = ({ skill }: { skill: typeof skills[0] }) => {
 
 export const SkillSection = () => {
   return (
-    <div className="bento-card h-full flex flex-col gap-6 group bg-zinc-900/50 border-zinc-800">
+    <div className="bento-card flex flex-col gap-6 group bg-zinc-900/50 border-zinc-800">
       <div className="flex items-center gap-2 text-zinc-400">
         <Cpu size={18} className="group-hover:text-indigo-400 transition-colors animate-pulse" />
         <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-300">Expertise</h3>
       </div>
       
-      <div className="grid grid-cols-3 gap-3 overflow-y-auto pr-2 custom-scrollbar">
+      <div className="grid grid-cols-3 gap-3">
         {skills.map((skill) => (
           <SkillCard key={skill.name} skill={skill} />
         ))}
