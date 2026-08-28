@@ -34,13 +34,13 @@ export const HeroSection = () => {
   return (
     <div className="bento-card flex flex-col gap-8 group overflow-hidden bg-zinc-900/50 border-zinc-800">
       <div className="space-y-8 relative z-10">
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-nowrap items-center gap-2 sm:gap-4">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800 text-zinc-400 text-xs font-semibold border border-zinc-700"
+            className="inline-flex items-center gap-1.5 sm:gap-2 shrink-0 px-2.5 sm:px-3 py-1 rounded-full bg-zinc-800 text-zinc-400 text-[10px] sm:text-xs font-semibold border border-zinc-700 whitespace-nowrap"
           >
-            <span className="relative flex h-2 w-2">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
@@ -51,9 +51,9 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-1.5 text-zinc-500 text-xs font-medium"
+            className="inline-flex items-center gap-1 sm:gap-1.5 shrink-0 text-zinc-500 text-[10px] sm:text-xs font-medium whitespace-nowrap"
           >
-            <MapPin size={14} />
+            <MapPin size={14} className="shrink-0" />
             Mumbai, India
           </motion.div>
         </div>
@@ -108,18 +108,24 @@ export const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="flex flex-wrap gap-4 relative z-10"
+        className="grid grid-cols-2 gap-3 w-full sm:flex sm:flex-wrap sm:gap-4 relative z-10"
       >
-        <Link href="/projects" className="btn-primary group/btn">
+        <Link
+          href="/projects"
+          className="btn-primary group/btn !px-4 sm:!px-8 !py-2.5 sm:!py-3 text-sm sm:text-base w-full sm:w-auto justify-center"
+        >
           View Projects
           <ArrowRight
             size={18}
-            className="transition-transform group-hover/btn:translate-x-1"
+            className="transition-transform group-hover/btn:translate-x-1 shrink-0"
           />
         </Link>
 
-        <Link href="/contact-me" className="btn-secondary">
-          <MessageCircle size={18} />
+        <Link
+          href="/contact-me"
+          className="btn-secondary !px-4 sm:!px-8 !py-2.5 sm:!py-3 text-sm sm:text-base w-full sm:w-auto justify-center"
+        >
+          <MessageCircle size={18} className="shrink-0" />
           Contact Me
         </Link>
       </motion.div>

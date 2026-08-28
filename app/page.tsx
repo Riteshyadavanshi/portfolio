@@ -31,7 +31,7 @@ const HomePage = () => {
           <ContactCard />
         </div>
 
-        <div className="md:col-span-6 lg:col-span-8 bento-card bg-zinc-900/50 border-zinc-800 flex items-center justify-center p-12 text-center group">
+        <div className="hidden md:flex md:col-span-6 lg:col-span-8 bento-card bg-zinc-900/50 border-zinc-800 items-center justify-center p-12 text-center group">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white tracking-tighter uppercase">
               Currently engineering at Dispatch Panda

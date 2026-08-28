@@ -13,7 +13,10 @@ const AboutSection = () => {
         
         <div className="space-y-6">
           <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:bottom-0 before:w-px before:bg-zinc-800">
-            <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-zinc-700 ring-4 ring-zinc-900/50" />
+            <div className="absolute left-[-5px] top-2 flex h-2.5 w-2.5 items-center justify-center">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-60" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500 ring-4 ring-green-500/20 shadow-[0_0_10px_rgba(34,197,94,0.6)]" />
+            </div>
             <div className="space-y-1">
               <h4 className="text-sm font-bold text-white uppercase tracking-tight">Junior Software Developer</h4>
               <p className="text-xs text-zinc-400 font-medium">Dispatch Panda • Jun 2025 - Present</p>
