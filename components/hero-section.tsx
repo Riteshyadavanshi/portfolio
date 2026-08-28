@@ -32,8 +32,8 @@ const metrics = [
 
 export const HeroSection = () => {
   return (
-    <div className="bento-card flex flex-col gap-5 sm:gap-8 group overflow-hidden bg-zinc-900/50 border-zinc-800">
-      <div className="space-y-5 sm:space-y-8 relative z-10">
+    <div className="bento-card h-full flex flex-col gap-5 sm:gap-8 group overflow-hidden bg-zinc-900/50 border-zinc-800">
+      <div className="space-y-5 sm:space-y-8 relative z-10 flex-1">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-4">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -108,7 +108,7 @@ export const HeroSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="flex gap-3 w-full sm:flex-wrap sm:gap-4 relative z-10"
+        className="flex gap-3 w-full sm:flex-wrap sm:gap-4 relative z-10 mt-auto shrink-0"
       >
         <Link
           href="/projects"

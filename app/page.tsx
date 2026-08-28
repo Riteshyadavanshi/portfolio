@@ -10,12 +10,12 @@ import { ContactCard } from "@/components/contact-card";
 const HomePage = () => {
   return (
     <div className="page-container space-y-4 sm:space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 sm:gap-6 items-start">
-        <div className="md:col-span-6 lg:col-span-8">
+      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
+        <div className="md:col-span-6 lg:col-span-8 h-full">
           <HeroSection />
         </div>
 
-        <div className="md:col-span-3 lg:col-span-4">
+        <div className="md:col-span-3 lg:col-span-4 h-full">
           <SkillSection />
         </div>
 

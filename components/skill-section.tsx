@@ -21,6 +21,11 @@ import {
   GitBranch,
   Sparkles,
   Layout,
+  Leaf,
+  Bot,
+  Hexagon,
+  Container,
+  Wand2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -74,6 +79,18 @@ const skills = [
     glow: "249, 115, 22",
   },
   {
+    name: "Spring Boot",
+    icon: <Leaf size={20} className="text-green-500" />,
+    color: "rgba(34, 197, 94, 0.12)",
+    glow: "34, 197, 94",
+  },
+  {
+    name: "NestJS",
+    icon: <Hexagon size={20} className="text-rose-400" />,
+    color: "rgba(251, 113, 133, 0.12)",
+    glow: "251, 113, 133",
+  },
+  {
     name: "GraphQL",
     icon: <Globe size={20} className="text-pink-500" />,
     color: "rgba(236, 72, 153, 0.12)",
@@ -114,6 +131,30 @@ const skills = [
     icon: <Sparkles size={20} className="text-purple-400" />,
     color: "rgba(192, 132, 252, 0.12)",
     glow: "192, 132, 252",
+  },
+  {
+    name: "Agentic Coding",
+    icon: <Bot size={20} className="text-indigo-400" />,
+    color: "rgba(129, 140, 248, 0.12)",
+    glow: "129, 140, 248",
+  },
+  {
+    name: "Claude Code",
+    icon: <Sparkles size={20} className="text-amber-400" />,
+    color: "rgba(251, 191, 36, 0.12)",
+    glow: "251, 191, 36",
+  },
+  {
+    name: "Cursor",
+    icon: <Wand2 size={20} className="text-violet-400" />,
+    color: "rgba(167, 139, 250, 0.12)",
+    glow: "167, 139, 250",
+  },
+  {
+    name: "Docker",
+    icon: <Container size={20} className="text-blue-400" />,
+    color: "rgba(96, 165, 250, 0.12)",
+    glow: "96, 165, 250",
   },
 ];
 
@@ -167,7 +208,7 @@ const SkillCard = ({
         y: isSpotlight ? -4 : isHovered ? -2 : 0,
       }}
       transition={{ type: "spring", stiffness: 400, damping: 22 }}
-      className="relative h-20 w-full cursor-pointer perspective-1000"
+      className="relative h-full min-h-[4.5rem] w-full cursor-pointer perspective-1000"
     >
       <motion.div
         animate={
@@ -237,7 +278,7 @@ const SkillCard = ({
         <motion.span
           animate={{ color: isActive ? "#ffffff" : "#71717a" }}
           transition={{ duration: 0.25 }}
-          className="text-[9px] font-bold uppercase tracking-wider text-center px-1 relative z-10"
+          className="text-[8px] sm:text-[9px] font-bold uppercase tracking-wide text-center px-1 leading-tight relative z-10"
         >
           {skill.name}
         </motion.span>
@@ -268,7 +309,7 @@ export const SkillSection = () => {
   }, []);
 
   return (
-    <div className="bento-card flex flex-col gap-4 sm:gap-6 group bg-zinc-900/50 border-zinc-800 overflow-hidden">
+    <div className="bento-card h-full flex flex-col gap-4 sm:gap-6 group bg-zinc-900/50 border-zinc-800 overflow-hidden">
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2 text-zinc-400">
           <Cpu
@@ -296,7 +337,7 @@ export const SkillSection = () => {
         )}
       </div>
 
-      <div className="grid grid-cols-3 gap-3 relative">
+      <div className="grid grid-cols-3 gap-3 flex-1 auto-rows-fr min-h-0 relative">
         {skills.map((skill, index) => (
           <SkillCard
             key={skill.name}
