@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const ContactCard = () => {
   return (
-    <div className="bento-card h-full flex flex-col justify-between gap-6 group overflow-hidden bg-zinc-900/50 border-zinc-800">
+    <div className="bento-card h-full flex flex-col justify-between gap-4 sm:gap-6 group overflow-hidden bg-zinc-900/50 border-zinc-800">
       <div className="flex items-center gap-2 text-zinc-400">
         <Mail size={18} className="text-white" />
         <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-300">
@@ -39,13 +39,13 @@ export const ContactCard = () => {
       </div>
 
       <div className="pt-4 border-t border-zinc-800/50">
-        <div className="flex items-center justify-between text-xs">
-          <span className="text-zinc-500 font-bold uppercase tracking-widest">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 sm:gap-3 text-xs">
+          <span className="text-zinc-500 font-bold uppercase tracking-widest shrink-0">
             Email
           </span>
           <Link
             href="mailto:riteshyadav4122@gmail.com"
-            className="text-zinc-300 hover:text-white transition-colors"
+            className="text-zinc-300 hover:text-white transition-colors break-all sm:break-normal sm:text-right"
           >
             riteshyadav4122@gmail.com
           </Link>

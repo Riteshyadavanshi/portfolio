@@ -8,7 +8,7 @@ import { featuredProject } from "@/lib/projects";
 
 export const FeaturedProject = () => {
   return (
-    <div className="bento-card h-full flex flex-col gap-6 group overflow-hidden bg-zinc-900/50 border-zinc-800">
+    <div className="bento-card h-full flex flex-col gap-4 sm:gap-6 group overflow-hidden bg-zinc-900/50 border-zinc-800">
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-zinc-400">
           <Star size={18} className="text-yellow-500 fill-yellow-500/20" />
@@ -26,7 +26,7 @@ export const FeaturedProject = () => {
         </Link>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center flex-1">
+      <div className="grid md:grid-cols-2 gap-5 sm:gap-8 items-center flex-1">
         <div className="space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tighter">
             <span className="text-gradient">{featuredProject.projectName}</span>

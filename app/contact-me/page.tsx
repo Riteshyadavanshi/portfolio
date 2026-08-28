@@ -59,18 +59,18 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="pt-28 sm:pt-32 pb-24 px-4 sm:px-6 min-h-screen max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
+    <section className="page-container min-h-screen">
+      <div className="grid md:grid-cols-2 gap-6 sm:gap-10 lg:gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="space-y-8"
+          className="space-y-6 sm:space-y-8"
         >
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
+          <div className="space-y-3 sm:space-y-4">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter">
               Let&apos;s <span className="text-gradient">Connect</span>
             </h1>
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
+            <p className="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-md">
               Have a project in mind or just want to say hi? Feel free to reach
               out. I&apos;m always open to new opportunities and collaborations.
             </p>
@@ -90,7 +90,7 @@ const ContactForm = () => {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.15 }}
-          className="bento-card p-8 md:p-10"
+          className="bento-card"
         >
           <form onSubmit={handleSubmit} className="space-y-6" noValidate>
             <div className="space-y-2">

@@ -31,11 +31,15 @@
 
 @layer components {
   .bento-card {
-    @apply relative overflow-hidden bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 backdrop-blur-sm transition-all duration-300;
+    @apply relative overflow-hidden bg-zinc-900/50 border border-zinc-800 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 backdrop-blur-sm transition-all duration-300;
   }
 
   .bento-card:hover {
     @apply border-zinc-700 bg-zinc-900/80;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-24;
   }
 
   .text-gradient {

@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-zinc-900 bg-[#09090b]/80 backdrop-blur-lg py-12 px-6">
+    <footer className="border-t border-zinc-900 bg-[#09090b]/80 backdrop-blur-lg py-10 sm:py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="space-y-4 text-center md:text-left">
           <h2 className="text-2xl font-bold tracking-tighter text-gradient">

@@ -24,7 +24,7 @@ const ProjectCard = ({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bento-card group flex flex-col gap-6 bg-zinc-900/50 border-zinc-800"
+      className="bento-card group flex flex-col gap-4 sm:gap-6 bg-zinc-900/50 border-zinc-800"
     >
       <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-800/50">
         <ProjectImage

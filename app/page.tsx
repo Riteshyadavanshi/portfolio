@@ -9,8 +9,8 @@ import { ContactCard } from "@/components/contact-card";
 
 const HomePage = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-24 space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 items-start">
+    <div className="page-container space-y-4 sm:space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 sm:gap-6 items-start">
         <div className="md:col-span-6 lg:col-span-8">
           <HeroSection />
         </div>
@@ -31,7 +31,7 @@ const HomePage = () => {
           <ContactCard />
         </div>
 
-        <div className="hidden md:flex md:col-span-6 lg:col-span-8 bento-card bg-zinc-900/50 border-zinc-800 items-center justify-center p-12 text-center group">
+        <div className="hidden md:flex md:col-span-6 lg:col-span-8 bento-card bg-zinc-900/50 border-zinc-800 items-center justify-center p-8 sm:p-12 text-center group">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white tracking-tighter uppercase">
               Currently engineering at Dispatch Panda
