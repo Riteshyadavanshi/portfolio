@@ -30,7 +30,7 @@ export const Projects: Project[] = [
     projectUrl: "https://www.shopholicdiaries.com",
     description:
       "Freelance e-commerce site where users can browse products and checkout with cash on delivery or online payment via Razorpay.",
-    imageUrl: "/portfolio/p1.png",
+    imageUrl: "/p1.png",
     tags: ["E-commerce", "Razorpay"],
   },
   {
@@ -38,7 +38,7 @@ export const Projects: Project[] = [
     projectUrl: "https://ecommerce-six-lime.vercel.app/login",
     description:
       "Admin dashboard for e-commerce with login, order management, product CRUD, active user tracking, and order status updates.",
-    imageUrl: "/portfolio/p2.png",
+    imageUrl: "/p2.png",
     tags: ["Next.js", "Auth", "CRUD"],
   },
   {
@@ -46,7 +46,7 @@ export const Projects: Project[] = [
     projectUrl: "https://www.mariammantemple.org/",
     description:
       "Temple website with an admin dashboard to upload gallery and YouTube videos, plus a flow for users to join the team.",
-    imageUrl: "/portfolio/p4.png",
+    imageUrl: "/p4.png",
     tags: ["CMS", "Admin"],
   },
 ];
