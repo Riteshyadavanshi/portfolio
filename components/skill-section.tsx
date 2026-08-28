@@ -7,8 +7,6 @@ import {
   Cpu, 
   Globe, 
   Database, 
-  Cloud, 
-  ShieldCheck, 
   Smartphone,
   Zap,
   Palette,

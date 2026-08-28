@@ -32,7 +32,7 @@ const ProjectPage = () => {
         transition={{ delay: 0.4 }}
         className="grid md:grid-cols-2 gap-6"
       >
-        {Projects.map((project, index) => (
+        {Projects.map((project) => (
           <ProjectCard {...project} key={project.projectName} />
         ))}
       </motion.div>
